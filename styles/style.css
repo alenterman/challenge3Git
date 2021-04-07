@@ -1,0 +1,171 @@
+
+
+
+/*logo styles*/
+
+#spaceFoto{
+	width:70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
+#header{
+	margin: 0px;
+	grid-area: header;
+	place-self: center;
+}
+
+
+
+body{
+	background-color: #F4F7F6;
+	color: black;
+	display:grid;
+	font-family: "Segoe UI" , sans-serif;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"welkom"
+	"weer"
+	"locatie"
+	"waaien"
+	;
+	/*column-gap: 25px;
+	grid-row-gap: 10px;*/
+}
+
+#welkom{
+	text-align: center;
+	grid-area: welkom
+}
+
+#weer, #locatie, #waaien{
+	color: white;
+	background-color: #575757;
+	margin:15px;
+	padding: 10px;
+	border-radius: 10px;
+	letter-spacing: 1.5px;
+}
+
+#map{
+	width: 95%;
+	height: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+}
+
+#weer{
+	grid-area: weer;
+	text-align: center;
+	height: 250px;
+}
+
+#locatie{
+	grid-area: locatie;
+	text-align: center;
+	height: 250px;
+}
+
+#waaien{
+	grid-area: waaien;
+	text-align: center;
+	height: 250px;
+}
+
+#titelWind{
+	text-align: center;
+}
+
+#wind, #weather{
+	line-height: 1.9;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+/*media querie voor ipad
+*/
+@media only screen and (min-width: 700px){
+	body{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+		"header header header header"
+		"welkom welkom welkom welkom"
+		"weer weer waaien waaien"
+		". locatie locatie ."
+		;
+		
+
+	}
+	
+	
+	#spaceFoto{
+		width:50%;
+	}
+
+
+}	
+
+
+/*media querie voor laptop
+*/
+@media only screen and (min-width: 1200px){
+	body{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"header header header"
+		"welkom welkom welkom"
+		"weer waaien locatie"
+		;
+	}	
+
+
+
+
+}
+
+
+
+/*media querie voor desktop*/
+
+@media only screen and (min-width: 1920px){
+	
+	#spaceFoto{
+		width:40%;
+	}
+
+	#weer, #locatie, #waaien{
+		height: 350px;
+	}
+
+	#icoon{
+		width: 30%;
+	}
+
+	h1{
+		font-size: 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
